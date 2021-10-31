@@ -1,4 +1,6 @@
 ﻿using System;
+using BankyStuffLibrary;
+using Humanizer;
 
 namespace MySuperBank
 {
@@ -6,6 +8,17 @@ namespace MySuperBank
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine($"{DateTime.Now.Humanize()}");
+            Console.WriteLine("car".Pluralize());
+            Console.WriteLine("dog".Pluralize());
+            Console.WriteLine("octopus".Pluralize());
+            
+            Console.WriteLine(1488.ToWords());
+
+
+
+
             var bankAccount = new BankAccount( "Arty", 10000);
             Console.WriteLine(
                 $"A new bank account {bankAccount.Number} was created for {bankAccount.Owner} with ${bankAccount.Balance}");
