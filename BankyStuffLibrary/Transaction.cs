@@ -1,10 +1,19 @@
 ﻿using System;
+using System.Globalization;
+using Humanizer;
 
 namespace BankyStuffLibrary
 {
     public class Transaction
     {
         public decimal Amount { get; set; }
+
+        public string HumanReadableAmount {
+            get
+            {
+                return ((int)Amount).ToWords();
+            }
+        }
 
         public DateTime Date { get; set; }
         public string Notes { get; set; }

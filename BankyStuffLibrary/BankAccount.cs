@@ -70,7 +70,7 @@ namespace BankyStuffLibrary
             history.AppendLine("Date\t\tAmount\tNote");
             foreach (var transaction in allTransactions)
             {
-                history.AppendLine($"{transaction.Date.ToShortDateString()}\t${transaction.Amount}\t{transaction.Notes}");
+                history.AppendLine($"{transaction.Date.ToShortDateString()}\t${transaction.HumanReadableAmount}\t{transaction.Notes}");
             }
             return history.ToString();
         }
